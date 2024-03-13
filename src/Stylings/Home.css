@@ -1,0 +1,41 @@
+.container-home {
+  border: solid;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.box {
+  width: 700px;
+  height: 450px;
+  background-color: transparent;
+  padding: 20px;
+  margin-top: 60px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .box {
+    width: 45%; /* Adjust the width for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .box {
+    width: 100%; /* Make the boxes full width on smaller screens */
+  }
+}

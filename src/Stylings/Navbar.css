@@ -1,0 +1,31 @@
+.container {
+  border: solid;
+}
+li {
+  list-style: none;
+  display: inline;
+  padding: 20px;
+  vertical-align: middle;
+}
+ul {
+  text-decoration: none;
+  text-align: left;
+}
+
+a {
+  text-decoration: none; /* Remove underline */
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+.icon {
+  left: 0;
+  text-align: right;
+}
+
+body {
+  background-image: url("../Images/pxfuel.jpg");
+  font-family: "Press Start 2P";
+}
