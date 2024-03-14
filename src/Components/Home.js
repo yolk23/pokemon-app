@@ -3,8 +3,19 @@ import Navbar from "./Navbar";
 import "../Stylings/Home.css";
 import Button from "../Utils/Button";
 import Footer from "./Footer";
+import { useState, useEffect } from "react";
 
 const Home = () => {
+  const [dividerWords, setDividerWords] = useState(0);
+  const words = ["Welcome To Pokemon", "Explore the World!", "Catchem' All!"];
+  const [youtubeID] = useState("rg6CiPI6h2g");
+
+  useEffect(() => {
+    const intervals = setInterval(() => {
+      setDividerWords((index) => (index + 1) % words.length);
+    }, 5000);
+  }, []);
+
   return (
     <div className="container-home">
       <Navbar />
@@ -30,12 +41,45 @@ const Home = () => {
           </p>
           <Button />
         </div>
-        <div className="box">
+        <div className="box" style={{ border: "none" }}>
           <img
             src="https://i.gifer.com/YNXo.gif"
             alt="Pikachu"
-            style={{ width: "100%", height: "100%" }}
+            style={{ width: "80%", height: "100%" }}
           />
+        </div>
+      </div>
+      <div className="container" style={{ background: "red" }}>
+        <h3>{words[dividerWords]}</h3>
+      </div>
+      <div
+        className="container"
+        style={{
+          height: "70vh",
+          alignContent: "center",
+          justifyContent: "center",
+          backgroundColor: "",
+        }}
+      >
+        <div className="box" style={{ border: "none" }}>
+          <h1>Catchy Theme Songs</h1>
+          <iframe
+            className="video"
+            title="Youtube player"
+            sandbox="allow-same-origin allow-forms allow-popups allow-scripts allow-presentation"
+            src={`https://youtube.com/embed/${youtubeID}?autoplay=0`}
+            width="100%"
+            height="300px"
+          ></iframe>
+        </div>
+        <div className="box">
+          <h1>Venture Forth</h1>
+          <p>
+            Pokemon: Where creatures with personalities as electric as Pikachu
+            and charm as timeless as Charmander roam, turning every journey into
+            an adventure, every battle into a legendary tale, and every trainer
+            into a hero
+          </p>
         </div>
       </div>
       <Footer />
