@@ -1,19 +1,26 @@
 .container-home {
-  border: solid;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 20px;
 }
 
 .box {
-  width: 700px;
-  height: 450px;
+  flex: 1;
+  max-width: 45%; /* Each box will take maximum 45% of the container */
+  min-width: 300px; /* Minimum width to maintain readability */
   background-color: transparent;
   padding: 20px;
-  margin-top: 60px;
+  margin: 10px;
+  border: solid;
 }
 
 h1 {
@@ -27,15 +34,17 @@ p {
   margin-bottom: 15px;
 }
 
-/* Media query for responsiveness */
-@media (max-width: 768px) {
-  .box {
-    width: 45%; /* Adjust the width for smaller screens */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 20px; /* Decrease font size for h1 */
+    text-align: center; /* Center the text */
+    margin-bottom: 10px; /* Adjust margin */
   }
-}
 
-@media (max-width: 576px) {
-  .box {
-    width: 100%; /* Make the boxes full width on smaller screens */
+  p {
+    font-size: 14px; /* Decrease font size for p */
+    line-height: 1.4; /* Adjust line height */
+
+    margin-bottom: 15px; /* Adjust margin */
   }
 }
