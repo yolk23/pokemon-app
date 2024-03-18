@@ -20,5 +20,3 @@ function permute(nums) {
 
   console.log(result);
 }
-
-permute([1, 2, 3]);

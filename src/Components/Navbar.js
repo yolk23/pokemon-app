@@ -8,13 +8,11 @@ import { RiCellphoneFill } from "react-icons/ri";
 import { LuGamepad } from "react-icons/lu";
 
 const Navbar = () => {
-  console.log("Rendering Navbar...");
-
   return (
     <div className="container" style={{ backgroundColor: "white" }}>
       <nav>
         <ul>
-          <li style={{ border: "solid" }}>
+          <li>
             <SiPokemon size={30} />
           </li>
           <li>
